@@ -3,7 +3,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WildKingdomTest {
+public class MainTest {
     static final String USAGE = "Usage: java Main <wolves> <rabbits> <months>";
     static int passed = 0;
     static int failed = 0;
@@ -82,7 +82,7 @@ public class WildKingdomTest {
         System.setOut(new PrintStream(outBuffer));
         System.setErr(new PrintStream(errBuffer));
         try {
-            WildKingdom.run(args);
+            Main.main(args);
         } finally {
             System.setOut(originalOut);
             System.setErr(originalErr);

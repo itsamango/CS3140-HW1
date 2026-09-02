@@ -4,7 +4,7 @@
 
 From the project root:
 
-    java src/WildKingdomTest.java
+    java src/MainTest.java
 
 The test driver requires no JUnit and no build tools; like the program itself,
 it runs directly from source. It prints PASS or FAIL for each case followed by
@@ -12,20 +12,20 @@ a summary line of the form `11 passed, 0 failed`.
 
 ## How the tests work
 
-`WildKingdomTest.java` is a plain Java program. For each case it:
+`MainTest.java` is a plain Java program. For each case it:
 
 1. Captures standard output and standard error by redirecting `System.out`
    and `System.err` into in-memory buffers.
-2. Calls `WildKingdom.run` with the case's arguments.
+2. Calls `Main.main` with the case's arguments.
 3. Restores the original streams.
 4. Compares the captured output against the expected output for the case.
    For simulation cases, stdout is compared line by line (the first differing
    line is reported on failure). For usage-error cases, stdout must be empty
    and stderr must equal the usage message.
 
-Because the tests call `WildKingdom.run` directly, they exercise the same code
-the `Main` entry point calls and check the exact text the program produces,
-including the begin line, every monthly line, and the final line.
+Because the tests call `Main.main` directly, they exercise the exact program
+entry point and check the exact text the program produces, including the begin
+line, every monthly line, and the final line.
 
 ## Test cases
 

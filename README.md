@@ -13,7 +13,7 @@ Run directly from source (JDK 22+):
 
 Or compile and run on any JDK 8+:
 
-    javac -d out src/Main.java src/WildKingdom.java
+    javac -d out src/Main.java
     java -cp out Main 3 10 3
 
 Invalid input (wrong argument count, non-integer, or negative value) prints a

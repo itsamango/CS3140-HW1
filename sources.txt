@@ -16,3 +16,5 @@ Prompts (summarized):
 - Asked for an alignment review against the assignment; converted Main to a
   conventional class for JDK compatibility, added the root README, and set up
   the GitHub repository.
+- Moved the simulation logic into Main as the single class the assignment
+  implies, renamed the test driver to MainTest, and updated the documentation.

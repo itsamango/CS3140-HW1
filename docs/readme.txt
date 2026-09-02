@@ -6,8 +6,8 @@ arguments -- the starting number of wolves, the starting number of rabbits, and
 the number of months to simulate -- and predicts how the valley's populations
 change, applying rules for wolf feeding, starvation, and breeding and for
 rabbit breeding. It prints the populations after each month and ends with a
-summary of the final counts. The source files are src/Main.java (the entry
-point) and src/WildKingdom.java (all simulation logic).
+summary of the final counts. The program is a single class: src/Main.java
+contains the entry point and all simulation logic.
 
 Requirements
 ------------
@@ -39,7 +39,7 @@ Compiling and running on any JDK
 --------------------------------
 From the project root:
 
-    javac -d out src/Main.java src/WildKingdom.java
+    javac -d out src/Main.java
     java -cp out Main 3 10 3
 
 The out/ directory is already listed in .gitignore.
@@ -65,14 +65,14 @@ Running the tests
 -----------------
 From the project root:
 
-    java src/WildKingdomTest.java
+    java src/MainTest.java
 
 The test driver prints PASS or FAIL for each case and a summary at the end.
 It requires no JUnit and no build tools. On JDK 15 through 21 (before direct
 source launch was available), compile first with the same pattern:
 
-    javac -d out src/WildKingdomTest.java src/WildKingdom.java
-    java -cp out WildKingdomTest
+    javac -d out src/MainTest.java src/Main.java
+    java -cp out MainTest
 
 Further documentation
 ---------------------

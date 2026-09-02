@@ -9,10 +9,10 @@ month it applies rules for eating, starvation, and breeding, prints the
 resulting populations, and ends with a summary of the final counts. The
 simulation is deterministic: the same arguments always produce the same output.
 
-The program consists of two source files. `Main.java` is the entry point
-required by the assignment; it does nothing but call `WildKingdom.run`.
-`WildKingdom.java` holds all of the logic: argument validation, the monthly
-simulation loop, and output.
+The program is a single class. `Main.java` holds everything: the `main` entry
+point required by the assignment, argument validation, the monthly simulation
+loop, and the output, with one private helper (`parse`) for argument
+conversion.
 
 ## Simulation rules
 
@@ -43,27 +43,26 @@ Interpretation notes -- how the rules are applied in the code:
 ## UML
 
 ```
-+----------------------------+             +----------------------------------------+
-|            Main            |             |               WildKingdom              |
-+----------------------------+  run(args)  +----------------------------------------+
-| + main(String[] args)      |----------->| + run(String[] args) : void            |
-|     : void (static)        |             | - parse(String s) : int                |
-+----------------------------+             +----------------------------------------+
++--------------------------------+
+|              Main              |
++--------------------------------+
+| + main(String[] args) : void   |
+| - parse(String s) : int        |
++--------------------------------+
 ```
 
-`Main` is a conventional public class whose static `main` method delegates to
-`WildKingdom.run`. `+` marks public members and `-` private members. `main`
-calls `WildKingdom.run`, and `run` calls the private helper `parse` to convert
-each argument to an integer.
+`Main` is a conventional public class whose static `main` method holds the
+whole program. `+` marks public members and `-` private members. `main` calls
+the private helper `parse` to convert each argument to an integer.
 
 ## Pseudocode
 
-The pseudocode below matches the implementation in `WildKingdom.java` exactly.
+The pseudocode below matches the implementation in `Main.java` exactly.
 In the printed lines, W, R, and M abbreviate the current values of wolves,
 rabbits, and months, and `month` is the loop counter.
 
 ```
-RUN(args):
+MAIN(args):
     wolves, rabbits, months = -1
     if args has exactly 3 entries:
         wolves = parse(args[0]); rabbits = parse(args[1]); months = parse(args[2])
@@ -88,9 +87,9 @@ PARSE(s):
 
 ## Design decisions
 
-- `Main` is the entry point, as the assignment requires. It contains only the
-  `main` method and delegates all logic to `WildKingdom.run`, keeping the entry
-  point trivial and letting tests call the simulation directly.
+- All logic lives in `Main`, the single class the assignment asks for; the
+  assignment notes the solution may not require a fancy architecture, and one
+  class keeps the program simple. Tests call `Main.main` directly.
 - `Main` is a conventional class with a static `main` method, and the program
   uses no language features newer than Java 8, so graders can compile and run
   it on any JDK from 8 upward.
