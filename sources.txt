@@ -2,19 +2,13 @@ AI usage disclosure for the WildKingdom homework
 Agent: opencode (open-source command-line coding agent)
 Model/version: GLM 5.2 (Z.ai)
 Prompts (summarized):
-- Supplied the assignment (src/Homework 1.docx.md) and asked for a simple
-  single-class Java implementation in WildKingdom with Main as the thin entry
-  point, specifying the eating order (each wolf eats one rabbit first, then
-  fed wolves eat a second until the rabbits run out), that only wolves eating
-  at least 2 rabbits breed, that two wolves are needed to breed, that
-  wolves/rabbits are integers, that zero is a valid argument value, and the
-  per-month output format.
-- Then asked for agents to create the tests, the readme, the UML with
-  pseudocode, and this documentation.
-- Design Q&A with the agent settled the entry-point structure, validation
-  rules, and output wording.
+- asked for a simple single-class Java implementation in Main, specifying the
+  eating order (each wolf eats one rabbit first, then fed wolves eat a second
+  until the rabbits run out), that only wolves eating at least 2 rabbits
+  breed, that two wolves are needed to breed, that wolves/rabbits are
+  integers, that zero is a valid argument value, and the per-month output format.
+- Asked for readme reformatting and UML design reformatting in readme.txt and design.md
+- Planned with agent how to best navigate the workflow and build a successful model
 - Asked for an alignment review against the assignment; converted Main to a
   conventional class for JDK compatibility, added the root README, and set up
   the GitHub repository.
-- Moved the simulation logic into Main as the single class the assignment
-  implies, renamed the test driver to MainTest, and updated the documentation.
