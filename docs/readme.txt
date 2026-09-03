@@ -83,4 +83,4 @@ docs/design.md   Design documentation: simulation rules and interpretation
                  notes, UML diagram, pseudocode, and design decisions.
 docs/tests.md    Test documentation: how the tests work and the full list of
                  cases with expected results.
-sources.txt      AI usage disclosure (at the project root).
+docs/sources.txt AI usage disclosure.
