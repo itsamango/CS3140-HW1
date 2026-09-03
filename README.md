@@ -9,12 +9,12 @@ starvation, and breeding and for rabbit breeding.
 
 Run directly from source (JDK 22+):
 
-    java src/Main.java 3 10 3
+    java src/Main.java <wolves> <rabbits> <months>
 
 Or compile and run on any JDK 8+:
 
     javac -d out src/Main.java
-    java -cp out Main 3 10 3
+    java -cp out Main <wolves> <rabbits> <months>
 
 Invalid input (wrong argument count, non-integer, or negative value) prints a
 usage message; zero is valid. See docs/readme.txt for full instructions.
@@ -24,4 +24,4 @@ usage message; zero is valid. See docs/readme.txt for full instructions.
 - docs/readme.txt -- how to run (command line and IntelliJ), input rules, tests
 - docs/design.md -- simulation rules, UML, pseudocode, design decisions
 - docs/tests.md -- test plan and how to run the tests
-- sources.txt -- AI usage disclosure
+- docs/sources.txt -- AI usage disclosure
